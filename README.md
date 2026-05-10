@@ -1,4 +1,4 @@
-# 🍁 Toronto Environment Lakehouse
+# Toronto Environment Lakehouse
 
 > A production-pattern **Data Lakehouse on a laptop** — hourly weather and air quality data for Toronto, flowing through a fully automated ELT pipeline into a live Streamlit dashboard.
 
@@ -226,6 +226,3 @@ Python 3.12 required. dbt-core does not support Python 3.14+.
 ## Author
 
 **Brad Van Oost** · Senior Data Engineer  
-Toronto, ON · [LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
-
-> *Built as a portfolio demonstration of modern ELT patterns using open-source tooling.*
