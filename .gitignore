@@ -1,0 +1,15 @@
+# Python virtual environment
+venv/
+__pycache__/
+
+# Database files
+*.duckdb
+*.duckdb.wal
+
+# Environment variables (Secrets)
+.env
+
+# dbt hidden folders
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/

@@ -1,0 +1,507 @@
+[0m20:30:44.433458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4c1fc500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4c759370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4c759250>]}
+
+
+============================== 20:30:44.436291 | 85dbc44b-4630-4e88-aa50-9d835150fba0 ==============================
+[0m20:30:44.436291 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:30:44.436821 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'log_path': '/home/bvanoost/GIT/trigger_tracker/toronto_dbt/logs', 'debug': 'False', 'invocation_command': 'dbt debug', 'empty': 'None', 'log_cache_events': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'partial_parse': 'True', 'target_path': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'no_print': 'None', 'profiles_dir': '/home/bvanoost/.dbt', 'log_format': 'default'}
+[0m20:30:44.444549 [info ] [MainThread]: dbt version: 1.11.9
+[0m20:30:44.444977 [info ] [MainThread]: python version: 3.12.13
+[0m20:30:44.445363 [info ] [MainThread]: python path: /home/bvanoost/GIT/trigger_tracker/venv/bin/python3.12
+[0m20:30:44.445721 [info ] [MainThread]: os info: Linux-7.0.0-14-generic-x86_64-with-glibc2.43
+[0m20:30:44.565904 [info ] [MainThread]: Using profiles dir at /home/bvanoost/.dbt
+[0m20:30:44.566393 [info ] [MainThread]: Using profiles.yml file at /home/bvanoost/.dbt/profiles.yml
+[0m20:30:44.566774 [info ] [MainThread]: Using dbt_project.yml file at /home/bvanoost/GIT/trigger_tracker/toronto_dbt/dbt_project.yml
+[0m20:30:44.568028 [info ] [MainThread]: adapter type: duckdb
+[0m20:30:44.568400 [info ] [MainThread]: adapter version: 1.10.1
+[0m20:30:44.682399 [info ] [MainThread]: Configuration:
+[0m20:30:44.682839 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:30:44.683252 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:30:44.683611 [info ] [MainThread]: Required dependencies:
+[0m20:30:44.683994 [debug] [MainThread]: Executing "git --help"
+[0m20:30:44.685968 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:30:44.686377 [debug] [MainThread]: STDERR: "b''"
+[0m20:30:44.686690 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:30:44.687032 [info ] [MainThread]: Connection:
+[0m20:30:44.687425 [info ] [MainThread]:   database: toronto_environment
+[0m20:30:44.687767 [info ] [MainThread]:   schema: main
+[0m20:30:44.688196 [info ] [MainThread]:   path: /home/bvanoost/GIT/trigger_tracker/toronto_environment.duckdb
+[0m20:30:44.688535 [info ] [MainThread]:   config_options: None
+[0m20:30:44.688876 [info ] [MainThread]:   extensions: None
+[0m20:30:44.689455 [info ] [MainThread]:   settings: {}
+[0m20:30:44.689983 [info ] [MainThread]:   external_root: .
+[0m20:30:44.690441 [info ] [MainThread]:   use_credential_provider: None
+[0m20:30:44.691024 [info ] [MainThread]:   attach: None
+[0m20:30:44.691378 [info ] [MainThread]:   filesystems: None
+[0m20:30:44.691733 [info ] [MainThread]:   remote: None
+[0m20:30:44.692255 [info ] [MainThread]:   plugins: None
+[0m20:30:44.692611 [info ] [MainThread]:   disable_transactions: False
+[0m20:30:44.693229 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:30:44.802305 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:30:44.828869 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:30:44.829396 [debug] [MainThread]: On debug: select 1 as id
+[0m20:30:44.829697 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:30:44.842613 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m20:30:44.843476 [debug] [MainThread]: On debug: Close
+[0m20:30:44.843816 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:30:44.844206 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:30:44.844989 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.46807164, "process_in_blocks": "8", "process_kernel_time": 0.166002, "process_mem_max_rss": "171876", "process_out_blocks": "16", "process_user_time": 1.664029}
+[0m20:30:44.845430 [debug] [MainThread]: Command `dbt debug` succeeded at 20:30:44.845341 after 0.47 seconds
+[0m20:30:44.845755 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:30:44.846138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4c759280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4204c0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ad4bfd6b10>]}
+[0m20:30:44.846528 [debug] [MainThread]: Flushing usage events
+[0m20:30:44.985146 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:32:04.430529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b79516c1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b793651490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b792819520>]}
+
+
+============================== 20:32:04.433315 | 2f59ecaf-1a7a-41be-a674-4453dc14752e ==============================
+[0m20:32:04.433315 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:32:04.433789 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'no_print': 'None', 'fail_fast': 'False', 'quiet': 'False', 'write_json': 'True', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '/home/bvanoost/.dbt', 'debug': 'False', 'printer_width': '80', 'invocation_command': 'dbt run --select stg_environment', 'use_experimental_parser': 'False', 'use_colors': 'True', 'empty': 'False', 'version_check': 'True', 'partial_parse': 'True', 'log_path': '/home/bvanoost/GIT/trigger_tracker/toronto_dbt/logs', 'introspect': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_cache_events': 'False'}
+[0m20:32:04.630740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b795051610>]}
+[0m20:32:04.689055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b792e5e360>]}
+[0m20:32:04.690446 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:32:04.793860 [debug] [MainThread]: checksum: f8bb6a62265c70f2530bed05e52c2cee1c1844b101d398a67d5798350ab914c5, vars: {}, profile: , target: , version: 1.11.9
+[0m20:32:04.794575 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:32:04.794951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b788480680>]}
+[0m20:32:05.950190 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.toronto_dbt.marts
+[0m20:32:05.958885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b788218410>]}
+[0m20:32:06.057365 [debug] [MainThread]: Wrote artifact WritableManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/manifest.json
+[0m20:32:06.058975 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/semantic_manifest.json
+[0m20:32:06.072532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b786624980>]}
+[0m20:32:06.072966 [info ] [MainThread]: Found 1 model, 2 sources, 477 macros
+[0m20:32:06.073351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b78661d5b0>]}
+[0m20:32:06.074745 [info ] [MainThread]: 
+[0m20:32:06.075139 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:32:06.075443 [info ] [MainThread]: 
+[0m20:32:06.075880 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:32:06.076664 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_toronto_environment'
+[0m20:32:06.121821 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment"
+[0m20:32:06.122388 [debug] [ThreadPool]: On list_toronto_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "list_toronto_environment"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"toronto_environment"'
+    
+  
+  
+[0m20:32:06.122830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:06.138205 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m20:32:06.139609 [debug] [ThreadPool]: On list_toronto_environment: Close
+[0m20:32:06.140401 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_toronto_environment, now create_toronto_environment_main_staging)
+[0m20:32:06.140949 [debug] [ThreadPool]: Creating schema "database: "toronto_environment"
+schema: "main_staging"
+"
+[0m20:32:06.147648 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_staging"
+[0m20:32:06.148093 [debug] [ThreadPool]: On create_toronto_environment_main_staging: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "create_toronto_environment_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='toronto_environment'
+        and type='sqlite'
+    
+  
+[0m20:32:06.148481 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:06.149575 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:32:06.150933 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_staging"
+[0m20:32:06.151342 [debug] [ThreadPool]: On create_toronto_environment_main_staging: BEGIN
+[0m20:32:06.151967 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:32:06.152359 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_staging"
+[0m20:32:06.152742 [debug] [ThreadPool]: On create_toronto_environment_main_staging: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "create_toronto_environment_main_staging"} */
+
+    
+    
+        create schema if not exists "toronto_environment"."main_staging"
+    
+[0m20:32:06.153417 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:32:06.154362 [debug] [ThreadPool]: On create_toronto_environment_main_staging: COMMIT
+[0m20:32:06.154767 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_staging"
+[0m20:32:06.155172 [debug] [ThreadPool]: On create_toronto_environment_main_staging: COMMIT
+[0m20:32:06.160612 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m20:32:06.160972 [debug] [ThreadPool]: On create_toronto_environment_main_staging: Close
+[0m20:32:06.161998 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_toronto_environment_main_staging, now list_toronto_environment_main_staging)
+[0m20:32:06.166493 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_staging"
+[0m20:32:06.166813 [debug] [ThreadPool]: On list_toronto_environment_main_staging: BEGIN
+[0m20:32:06.167148 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:06.167772 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:32:06.168083 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_staging"
+[0m20:32:06.168389 [debug] [ThreadPool]: On list_toronto_environment_main_staging: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "list_toronto_environment_main_staging"} */
+select
+      'toronto_environment' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'toronto_environment'
+  
+[0m20:32:06.171199 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m20:32:06.172274 [debug] [ThreadPool]: On list_toronto_environment_main_staging: ROLLBACK
+[0m20:32:06.173216 [debug] [ThreadPool]: Failed to rollback 'list_toronto_environment_main_staging'
+[0m20:32:06.173525 [debug] [ThreadPool]: On list_toronto_environment_main_staging: Close
+[0m20:32:06.174191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b793798ec0>]}
+[0m20:32:06.174617 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:06.174924 [debug] [MainThread]: On master: BEGIN
+[0m20:32:06.175404 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:32:06.176033 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:32:06.176346 [debug] [MainThread]: On master: COMMIT
+[0m20:32:06.176652 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:06.176948 [debug] [MainThread]: On master: COMMIT
+[0m20:32:06.177370 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:32:06.177676 [debug] [MainThread]: On master: Close
+[0m20:32:06.180608 [debug] [Thread-1 (]: Began running node model.toronto_dbt.stg_environment
+[0m20:32:06.181109 [info ] [Thread-1 (]: 1 of 1 START sql view model main_staging.stg_environment ....................... [RUN]
+[0m20:32:06.181531 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_toronto_environment_main_staging, now model.toronto_dbt.stg_environment)
+[0m20:32:06.181884 [debug] [Thread-1 (]: Began compiling node model.toronto_dbt.stg_environment
+[0m20:32:06.189188 [debug] [Thread-1 (]: Writing injected SQL for node "model.toronto_dbt.stg_environment"
+[0m20:32:06.190084 [debug] [Thread-1 (]: Began executing node model.toronto_dbt.stg_environment
+[0m20:32:06.231565 [debug] [Thread-1 (]: Writing runtime sql for node "model.toronto_dbt.stg_environment"
+[0m20:32:06.232331 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.stg_environment"
+[0m20:32:06.232760 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: BEGIN
+[0m20:32:06.233205 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:32:06.234022 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:32:06.234480 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.stg_environment"
+[0m20:32:06.235026 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.stg_environment"} */
+
+  
+  create view "toronto_environment"."main_staging"."stg_environment__dbt_tmp" as (
+    with weather_deduped as (
+    select
+        time_bucket(interval '1 hour', time::timestamptz) as observation_hour,
+        relative_humidity_2m,
+        surface_pressure,
+        row_number() over (
+            partition by time_bucket(interval '1 hour', time::timestamptz)
+            order by time::timestamptz desc
+        ) as rn
+    from "toronto_environment"."main"."raw_weather"
+    where time is not null
+),
+
+allergy_deduped as (
+    select
+        time_bucket(interval '1 hour', time::timestamptz) as observation_hour,
+        pm2_5,
+        pm10,
+        alder_pollen,
+        birch_pollen,
+        grass_pollen,
+        ragweed_pollen,
+        row_number() over (
+            partition by time_bucket(interval '1 hour', time::timestamptz)
+            order by time::timestamptz desc
+        ) as rn
+    from "toronto_environment"."main"."raw_allergy"
+    where time is not null
+),
+
+joined as (
+    select
+        w.observation_hour,
+        date_trunc('day', w.observation_hour)   as observation_date,
+        extract('hour' from w.observation_hour) as hour_of_day,
+
+        -- Weather
+        w.relative_humidity_2m,
+        w.surface_pressure,
+
+        -- Air quality
+        a.pm2_5,
+        a.pm10,
+
+        -- Pollen
+        a.alder_pollen,
+        a.birch_pollen,
+        a.grass_pollen,
+        a.ragweed_pollen
+
+    from weather_deduped w
+    left join allergy_deduped a
+        on  w.observation_hour = a.observation_hour
+        and a.rn = 1
+    where w.rn = 1
+)
+
+select * from joined
+order by observation_hour
+  );
+
+[0m20:32:06.236822 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:32:06.242309 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.stg_environment"
+[0m20:32:06.242718 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.stg_environment"} */
+alter view "toronto_environment"."main_staging"."stg_environment__dbt_tmp" rename to "stg_environment"
+[0m20:32:06.243415 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:32:06.254231 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: COMMIT
+[0m20:32:06.254690 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.stg_environment"
+[0m20:32:06.255085 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: COMMIT
+[0m20:32:06.260153 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m20:32:06.265027 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.stg_environment"
+[0m20:32:06.265391 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.stg_environment"} */
+
+      drop view if exists "toronto_environment"."main_staging"."stg_environment__dbt_backup" cascade
+    
+[0m20:32:06.266006 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:32:06.268036 [debug] [Thread-1 (]: On model.toronto_dbt.stg_environment: Close
+[0m20:32:06.269511 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2f59ecaf-1a7a-41be-a674-4453dc14752e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b7880d29f0>]}
+[0m20:32:06.270271 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main_staging.stg_environment .................. [[32mOK[0m in 0.09s]
+[0m20:32:06.270816 [debug] [Thread-1 (]: Finished running node model.toronto_dbt.stg_environment
+[0m20:32:06.272069 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:06.272393 [debug] [MainThread]: On master: BEGIN
+[0m20:32:06.272754 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:32:06.273397 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:32:06.273762 [debug] [MainThread]: On master: COMMIT
+[0m20:32:06.274116 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:06.274412 [debug] [MainThread]: On master: COMMIT
+[0m20:32:06.274861 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:32:06.275213 [debug] [MainThread]: On master: Close
+[0m20:32:06.275584 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:32:06.275873 [debug] [MainThread]: Connection 'model.toronto_dbt.stg_environment' was properly closed.
+[0m20:32:06.276306 [info ] [MainThread]: 
+[0m20:32:06.276642 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.20 seconds (0.20s).
+[0m20:32:06.277283 [debug] [MainThread]: Command end result
+[0m20:32:06.313764 [debug] [MainThread]: Wrote artifact WritableManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/manifest.json
+[0m20:32:06.315765 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/semantic_manifest.json
+[0m20:32:06.321613 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/run_results.json
+[0m20:32:06.322029 [info ] [MainThread]: 
+[0m20:32:06.322476 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:32:06.322846 [info ] [MainThread]: 
+[0m20:32:06.323225 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:32:06.324082 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.9508764, "process_in_blocks": "200", "process_kernel_time": 0.211999, "process_mem_max_rss": "183324", "process_out_blocks": "3232", "process_user_time": 3.057987}
+[0m20:32:06.324553 [debug] [MainThread]: Command `dbt run` succeeded at 20:32:06.324455 after 1.95 seconds
+[0m20:32:06.325065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b792f97bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b7881d3830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b79362af60>]}
+[0m20:32:06.325500 [debug] [MainThread]: Flushing usage events
+[0m20:32:06.506719 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:32:48.143245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af63583faa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af6355bd160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af6359226f0>]}
+
+
+============================== 20:32:48.146051 | c95606b3-14b9-4483-8739-776efda1827a ==============================
+[0m20:32:48.146051 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:32:48.146530 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error': 'None', 'no_print': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select mart_daily_environment', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'profiles_dir': '/home/bvanoost/.dbt', 'debug': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'introspect': 'True', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'log_path': '/home/bvanoost/GIT/trigger_tracker/toronto_dbt/logs'}
+[0m20:32:48.351426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62a9fde20>]}
+[0m20:32:48.408549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62ab641a0>]}
+[0m20:32:48.409912 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:32:48.497256 [debug] [MainThread]: checksum: f8bb6a62265c70f2530bed05e52c2cee1c1844b101d398a67d5798350ab914c5, vars: {}, profile: , target: , version: 1.11.9
+[0m20:32:48.576159 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m20:32:48.576611 [debug] [MainThread]: Partial parsing: added file: toronto_dbt://models/marts/mart_daily_environment.sql
+[0m20:32:48.809221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62a5edd60>]}
+[0m20:32:48.871519 [debug] [MainThread]: Wrote artifact WritableManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/manifest.json
+[0m20:32:48.873041 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/semantic_manifest.json
+[0m20:32:48.878933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62a5b0890>]}
+[0m20:32:48.879387 [info ] [MainThread]: Found 2 models, 2 sources, 477 macros
+[0m20:32:48.879731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af634ee03e0>]}
+[0m20:32:48.881233 [info ] [MainThread]: 
+[0m20:32:48.881586 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:32:48.881897 [info ] [MainThread]: 
+[0m20:32:48.882385 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:32:48.883191 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_toronto_environment'
+[0m20:32:48.975266 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment"
+[0m20:32:48.975649 [debug] [ThreadPool]: On list_toronto_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "list_toronto_environment"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"toronto_environment"'
+    
+  
+  
+[0m20:32:48.975951 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:48.987996 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m20:32:48.989181 [debug] [ThreadPool]: On list_toronto_environment: Close
+[0m20:32:48.989782 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_toronto_environment, now create_toronto_environment_main_marts)
+[0m20:32:48.990246 [debug] [ThreadPool]: Creating schema "database: "toronto_environment"
+schema: "main_marts"
+"
+[0m20:32:48.996020 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_marts"
+[0m20:32:48.996384 [debug] [ThreadPool]: On create_toronto_environment_main_marts: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "create_toronto_environment_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='toronto_environment'
+        and type='sqlite'
+    
+  
+[0m20:32:48.996690 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:48.997671 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:32:48.998788 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_marts"
+[0m20:32:48.999147 [debug] [ThreadPool]: On create_toronto_environment_main_marts: BEGIN
+[0m20:32:48.999562 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:32:48.999859 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_marts"
+[0m20:32:49.000203 [debug] [ThreadPool]: On create_toronto_environment_main_marts: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "create_toronto_environment_main_marts"} */
+
+    
+    
+        create schema if not exists "toronto_environment"."main_marts"
+    
+[0m20:32:49.000655 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:32:49.001406 [debug] [ThreadPool]: On create_toronto_environment_main_marts: COMMIT
+[0m20:32:49.001718 [debug] [ThreadPool]: Using duckdb connection "create_toronto_environment_main_marts"
+[0m20:32:49.002072 [debug] [ThreadPool]: On create_toronto_environment_main_marts: COMMIT
+[0m20:32:49.012827 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m20:32:49.013267 [debug] [ThreadPool]: On create_toronto_environment_main_marts: Close
+[0m20:32:49.014399 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_toronto_environment_main_marts, now list_toronto_environment_main_staging)
+[0m20:32:49.018950 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_staging"
+[0m20:32:49.019275 [debug] [ThreadPool]: On list_toronto_environment_main_staging: BEGIN
+[0m20:32:49.019564 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:49.020259 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_toronto_environment_main_marts'
+[0m20:32:49.021895 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_marts"
+[0m20:32:49.022207 [debug] [ThreadPool]: On list_toronto_environment_main_marts: BEGIN
+[0m20:32:49.022488 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:49.022948 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:32:49.023332 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_staging"
+[0m20:32:49.023644 [debug] [ThreadPool]: On list_toronto_environment_main_staging: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "list_toronto_environment_main_staging"} */
+select
+      'toronto_environment' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'toronto_environment'
+  
+[0m20:32:49.024161 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m20:32:49.024472 [debug] [ThreadPool]: Using duckdb connection "list_toronto_environment_main_marts"
+[0m20:32:49.024775 [debug] [ThreadPool]: On list_toronto_environment_main_marts: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "connection_name": "list_toronto_environment_main_marts"} */
+select
+      'toronto_environment' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_marts'
+    and lower(table_catalog) = 'toronto_environment'
+  
+[0m20:32:49.026684 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:32:49.027801 [debug] [ThreadPool]: On list_toronto_environment_main_staging: ROLLBACK
+[0m20:32:49.028754 [debug] [ThreadPool]: Failed to rollback 'list_toronto_environment_main_staging'
+[0m20:32:49.029115 [debug] [ThreadPool]: On list_toronto_environment_main_staging: Close
+[0m20:32:49.029458 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m20:32:49.030825 [debug] [ThreadPool]: On list_toronto_environment_main_marts: ROLLBACK
+[0m20:32:49.031618 [debug] [ThreadPool]: Failed to rollback 'list_toronto_environment_main_marts'
+[0m20:32:49.031921 [debug] [ThreadPool]: On list_toronto_environment_main_marts: Close
+[0m20:32:49.032680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62a5a9850>]}
+[0m20:32:49.033150 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:49.033455 [debug] [MainThread]: On master: BEGIN
+[0m20:32:49.033750 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:32:49.034366 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:32:49.034672 [debug] [MainThread]: On master: COMMIT
+[0m20:32:49.034982 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:49.035319 [debug] [MainThread]: On master: COMMIT
+[0m20:32:49.035731 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:32:49.036103 [debug] [MainThread]: On master: Close
+[0m20:32:49.038403 [debug] [Thread-1 (]: Began running node model.toronto_dbt.mart_daily_environment
+[0m20:32:49.038895 [info ] [Thread-1 (]: 1 of 1 START sql table model main_marts.mart_daily_environment ................. [RUN]
+[0m20:32:49.039341 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_toronto_environment_main_marts, now model.toronto_dbt.mart_daily_environment)
+[0m20:32:49.039707 [debug] [Thread-1 (]: Began compiling node model.toronto_dbt.mart_daily_environment
+[0m20:32:49.046631 [debug] [Thread-1 (]: Writing injected SQL for node "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.047509 [debug] [Thread-1 (]: Began executing node model.toronto_dbt.mart_daily_environment
+[0m20:32:49.091041 [debug] [Thread-1 (]: Writing runtime sql for node "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.091792 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.092232 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: BEGIN
+[0m20:32:49.092628 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:32:49.093378 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:32:49.093761 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.094191 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.mart_daily_environment"} */
+
+  
+    
+    
+
+    create  table
+      "toronto_environment"."main_marts"."mart_daily_environment__dbt_tmp"
+  
+    as (
+      with hourly as (
+    select * from "toronto_environment"."main_staging"."stg_environment"
+)
+
+select
+    observation_date,
+
+    -- Humidity & Pressure
+    round(avg(relative_humidity_2m)::numeric, 1) as avg_humidity_pct,
+    round(avg(surface_pressure)::numeric,     1) as avg_pressure_hpa,
+
+    -- Air Quality
+    round(avg(pm2_5)::numeric, 1) as avg_pm2_5,
+    round(max(pm2_5)::numeric, 1) as max_pm2_5,
+    round(avg(pm10)::numeric,  1) as avg_pm10,
+    round(max(pm10)::numeric,  1) as max_pm10,
+
+    -- Pollen
+    round(max(alder_pollen)::numeric,  0) as max_alder_pollen,
+    round(max(birch_pollen)::numeric,  0) as max_birch_pollen,
+    round(max(grass_pollen)::numeric,  0) as max_grass_pollen,
+    round(max(ragweed_pollen)::numeric,0) as max_ragweed_pollen,
+
+    count(*)             as hourly_records,
+    max(observation_hour) as last_observation_hour
+
+from hourly
+group by observation_date
+order by observation_date
+    );
+  
+  
+[0m20:32:49.106158 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m20:32:49.111396 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.111785 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.mart_daily_environment"} */
+alter table "toronto_environment"."main_marts"."mart_daily_environment__dbt_tmp" rename to "mart_daily_environment"
+[0m20:32:49.112637 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:32:49.125912 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: COMMIT
+[0m20:32:49.126378 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.126717 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: COMMIT
+[0m20:32:49.130871 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m20:32:49.135551 [debug] [Thread-1 (]: Using duckdb connection "model.toronto_dbt.mart_daily_environment"
+[0m20:32:49.135906 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "toronto_dbt", "target_name": "dev", "node_id": "model.toronto_dbt.mart_daily_environment"} */
+
+      drop table if exists "toronto_environment"."main_marts"."mart_daily_environment__dbt_backup" cascade
+    
+[0m20:32:49.136504 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m20:32:49.138316 [debug] [Thread-1 (]: On model.toronto_dbt.mart_daily_environment: Close
+[0m20:32:49.139602 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c95606b3-14b9-4483-8739-776efda1827a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af62a897dd0>]}
+[0m20:32:49.140164 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main_marts.mart_daily_environment ............ [[32mOK[0m in 0.10s]
+[0m20:32:49.140695 [debug] [Thread-1 (]: Finished running node model.toronto_dbt.mart_daily_environment
+[0m20:32:49.141951 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:49.142307 [debug] [MainThread]: On master: BEGIN
+[0m20:32:49.142600 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:32:49.143232 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:32:49.143545 [debug] [MainThread]: On master: COMMIT
+[0m20:32:49.143845 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:32:49.144198 [debug] [MainThread]: On master: COMMIT
+[0m20:32:49.144625 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:32:49.144933 [debug] [MainThread]: On master: Close
+[0m20:32:49.145499 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:32:49.145790 [debug] [MainThread]: Connection 'list_toronto_environment_main_staging' was properly closed.
+[0m20:32:49.146155 [debug] [MainThread]: Connection 'model.toronto_dbt.mart_daily_environment' was properly closed.
+[0m20:32:49.146618 [info ] [MainThread]: 
+[0m20:32:49.147019 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.26 seconds (0.26s).
+[0m20:32:49.147729 [debug] [MainThread]: Command end result
+[0m20:32:49.178474 [debug] [MainThread]: Wrote artifact WritableManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/manifest.json
+[0m20:32:49.180179 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/semantic_manifest.json
+[0m20:32:49.186502 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/bvanoost/GIT/trigger_tracker/toronto_dbt/target/run_results.json
+[0m20:32:49.187104 [info ] [MainThread]: 
+[0m20:32:49.187759 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:32:49.188313 [info ] [MainThread]: 
+[0m20:32:49.188888 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:32:49.190126 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1008465, "process_in_blocks": "536", "process_kernel_time": 0.221664, "process_mem_max_rss": "195984", "process_out_blocks": "3232", "process_user_time": 2.185687}
+[0m20:32:49.190890 [debug] [MainThread]: Command `dbt run` succeeded at 20:32:49.190750 after 1.10 seconds
+[0m20:32:49.191522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af6355bd160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af635187170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7af636f07530>]}
+[0m20:32:49.192169 [debug] [MainThread]: Flushing usage events
+[0m20:32:49.438055 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,96 @@
+[0m20:19:20.607163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7467666c10a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746767a02f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746767e92690>]}
+
+
+============================== 20:19:20.610110 | f46c0ba7-7b6c-4726-ad76-192725ba5e7f ==============================
+[0m20:19:20.610110 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:19:20.610574 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'write_json': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'introspect': 'True', 'profiles_dir': '/home/bvanoost/.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'printer_width': '80', 'fail_fast': 'False', 'debug': 'False', 'quiet': 'False', 'no_print': 'None', 'version_check': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'empty': 'None'}
+[0m20:19:20.620562 [info ] [MainThread]: dbt version: 1.11.9
+[0m20:19:20.621154 [info ] [MainThread]: python version: 3.12.13
+[0m20:19:20.621555 [info ] [MainThread]: python path: /home/bvanoost/GIT/spotify_habits/venv/bin/python3.12
+[0m20:19:20.621932 [info ] [MainThread]: os info: Linux-7.0.0-14-generic-x86_64-with-glibc2.43
+[0m20:19:20.622483 [info ] [MainThread]: Using profiles dir at /home/bvanoost/.dbt
+[0m20:19:20.622931 [info ] [MainThread]: Using profiles.yml file at /home/bvanoost/.dbt/profiles.yml
+[0m20:19:20.623405 [info ] [MainThread]: Using dbt_project.yml file at /home/bvanoost/GIT/spotify_habits/dbt_project.yml
+[0m20:19:20.623793 [info ] [MainThread]: Configuration:
+[0m20:19:20.624316 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m20:19:20.624773 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:19:20.625281 [info ] [MainThread]: Required dependencies:
+[0m20:19:20.625841 [debug] [MainThread]: Executing "git --help"
+[0m20:19:20.629025 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:19:20.629630 [debug] [MainThread]: STDERR: "b''"
+[0m20:19:20.630083 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:19:20.630560 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m20:19:20.631100 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:19:20.631617 [info ] [MainThread]: dbt looked for a profiles.yml file in /home/bvanoost/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:19:20.632161 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/bvanoost/GIT/spotify_habits/dbt_project.yml> not found
+
+[0m20:19:20.633468 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.07864942, "process_in_blocks": "760", "process_kernel_time": 0.125809, "process_mem_max_rss": "105720", "process_out_blocks": "16", "process_user_time": 1.267078}
+[0m20:19:20.634119 [debug] [MainThread]: Command `dbt debug` failed at 20:19:20.633999 after 0.08 seconds
+[0m20:19:20.634757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746766e228d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7467666c10a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7467666c0800>]}
+[0m20:19:20.635317 [debug] [MainThread]: Flushing usage events
+[0m20:19:20.847900 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:30:10.196778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e055b9400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e055b9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e0531a3c0>]}
+
+
+============================== 20:30:10.200921 | 445ef987-3ebc-4a7f-8a80-faf65a275889 ==============================
+[0m20:30:10.200921 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:30:10.201532 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'log_path': 'logs', 'use_colors': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'introspect': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'empty': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'write_json': 'True', 'static_parser': 'True', 'log_format': 'default', 'profiles_dir': '/home/bvanoost/.dbt'}
+[0m20:30:10.210275 [info ] [MainThread]: dbt version: 1.11.9
+[0m20:30:10.210711 [info ] [MainThread]: python version: 3.12.13
+[0m20:30:10.211101 [info ] [MainThread]: python path: /home/bvanoost/GIT/trigger_tracker/venv/bin/python3.12
+[0m20:30:10.211459 [info ] [MainThread]: os info: Linux-7.0.0-14-generic-x86_64-with-glibc2.43
+[0m20:30:10.350098 [info ] [MainThread]: Using profiles dir at /home/bvanoost/.dbt
+[0m20:30:10.350599 [info ] [MainThread]: Using profiles.yml file at /home/bvanoost/.dbt/profiles.yml
+[0m20:30:10.350999 [info ] [MainThread]: Using dbt_project.yml file at /home/bvanoost/GIT/trigger_tracker/dbt_project.yml
+[0m20:30:10.352435 [info ] [MainThread]: adapter type: duckdb
+[0m20:30:10.352855 [info ] [MainThread]: adapter version: 1.10.1
+[0m20:30:10.353320 [info ] [MainThread]: Configuration:
+[0m20:30:10.353707 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:30:10.354100 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:30:10.354488 [info ] [MainThread]: Required dependencies:
+[0m20:30:10.354900 [debug] [MainThread]: Executing "git --help"
+[0m20:30:10.357521 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:30:10.358113 [debug] [MainThread]: STDERR: "b''"
+[0m20:30:10.358515 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:30:10.358925 [info ] [MainThread]: Connection:
+[0m20:30:10.359360 [info ] [MainThread]:   database: toronto_environment
+[0m20:30:10.359729 [info ] [MainThread]:   schema: main
+[0m20:30:10.360108 [info ] [MainThread]:   path: /home/bvanoost/GIT/trigger_tracker/toronto_environment.duckdb
+[0m20:30:10.360472 [info ] [MainThread]:   config_options: None
+[0m20:30:10.360830 [info ] [MainThread]:   extensions: None
+[0m20:30:10.361232 [info ] [MainThread]:   settings: {}
+[0m20:30:10.361604 [info ] [MainThread]:   external_root: .
+[0m20:30:10.361976 [info ] [MainThread]:   use_credential_provider: None
+[0m20:30:10.362350 [info ] [MainThread]:   attach: None
+[0m20:30:10.362716 [info ] [MainThread]:   filesystems: None
+[0m20:30:10.363095 [info ] [MainThread]:   remote: None
+[0m20:30:10.363469 [info ] [MainThread]:   plugins: None
+[0m20:30:10.363836 [info ] [MainThread]:   disable_transactions: False
+[0m20:30:10.364359 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:30:10.481963 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:30:10.507582 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:30:10.508114 [debug] [MainThread]: On debug: select 1 as id
+[0m20:30:10.508601 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:30:10.525947 [debug] [MainThread]: SQL status: OK in 0.017 seconds
+[0m20:30:10.526949 [debug] [MainThread]: On debug: Close
+[0m20:30:10.527394 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:30:10.527814 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:30:10.528265 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/bvanoost/GIT/trigger_tracker/dbt_project.yml> not found
+
+[0m20:30:10.529344 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.40019447, "process_in_blocks": "6864", "process_kernel_time": 0.188825, "process_mem_max_rss": "170336", "process_out_blocks": "32", "process_user_time": 1.691438}
+[0m20:30:10.529899 [debug] [MainThread]: Command `dbt debug` failed at 20:30:10.529762 after 0.40 seconds
+[0m20:30:10.530458 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:30:10.530931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e052e90a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e057fb620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790e057fbe00>]}
+[0m20:30:10.531391 [debug] [MainThread]: Flushing usage events
+[0m20:30:10.701797 [debug] [MainThread]: An error was encountered while trying to flush usage events
