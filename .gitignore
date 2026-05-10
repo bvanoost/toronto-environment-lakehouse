@@ -1,15 +1,20 @@
-# Python virtual environment
+# Python
 venv/
 __pycache__/
+*.pyc
+*.pyo
 
-# Database files
+# dbt
+toronto_dbt/target/
+toronto_dbt/logs/
+dbt_packages/
+
+# DuckDB — too large and binary, not useful in git
 *.duckdb
 *.duckdb.wal
 
-# Environment variables (Secrets)
-.env
+# VS Code
+.vscode/
 
-# dbt hidden folders
-dbt_project/target/
-dbt_project/dbt_packages/
-dbt_project/logs/
+# OS
+.DS_Store
